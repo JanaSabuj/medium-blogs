@@ -1,0 +1,22 @@
+version : '3'
+
+services:
+    elb:
+        image: haproxy
+        ports:
+            - "8081:8081"
+        volumes:
+            - ./haproxy:/usr/local/etc/haproxy
+    goapp1:
+        image: goapp
+        environment:
+            - APPPORT=8081
+    goapp2:
+        image: goapp
+        environment:
+            - APPPORT=8082
+    goapp3:
+        image: goapp
+        environment:
+            - APPPORT=8083
+            
