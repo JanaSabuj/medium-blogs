@@ -4,7 +4,7 @@ services:
     elb:
         image: haproxy
         ports:
-            - "8081:8081"
+            - "8100:8100"
         volumes:
             - ./haproxy:/usr/local/etc/haproxy
     goapp1:
@@ -19,4 +19,3 @@ services:
         image: goapp
         environment:
             - APPPORT=8083
-            
