@@ -1,3 +1,0 @@
-docker built -t goapp .
-docker-compose up
-docker-compose down
