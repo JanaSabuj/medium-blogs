@@ -1,0 +1,1 @@
+## Sample manifests discussed in Ep01 of my K8s blog
