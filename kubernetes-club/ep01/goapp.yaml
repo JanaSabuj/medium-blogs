@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mygoapp-pod
+  namespace: fightclub
+  labels:
+     app: go-webserver
+spec:
+  containers:
+  - name: goapp
+    image: sabujjana/goapp:latest
+    ports:
+    - containerPort: 8083
+    env:
+      - name: APPPORT
+        value: "8083"
